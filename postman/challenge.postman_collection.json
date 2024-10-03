@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "0dca135e-bf63-4449-9085-7ebcd941d89e",
+		"name": "challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "13247373"
+	},
+	"item": [
+		{
+			"name": "REGISTER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "nicolas",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "san jose",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "alvarez",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234567",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "nicolas@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "picture",
+							"type": "file",
+							"src": "/C:/Users/NicoPC/Pictures/WhatsApp Image 2024-09-30 at 7.35.42 PM.jpeg"
+						}
+					]
+				},
+				"url": "http://localhost:3000/auth/register"
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"nicolas@gmail.com\",\r\n    \"password\": \"1234567\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2NmZkZTI2MTg0NDRjZmE4NDIzMDViNTMiLCJuYW1lIjoibmljb2xhcyIsImxhc3ROYW1lIjoiYWx2YXJleiIsImFkZHJlc3MiOiJzYW4gam9zZSIsInBpY3R1cmUiOiJuaWNvbGFzQGdtYWlsLmNvbS1XaGF0c0FwcCBJbWFnZSAyMDI0LTA5LTMwIGF0IDcuMzUuNDIgUE0uanBlZyIsImVtYWlsIjoibmljb2xhc0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCREai42Q1MycWFFZVMzUzZuQkFVMnNlNTNMcGdhVXhXTkliaXRWa0RXQXNTNGl1TjhXRlVXdSJ9.vCCq0Uey9DS0hYQvBhFUzLeU45RFb1WylDk0L1lGiJ0"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"jose\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/user"
+			},
+			"response": []
+		},
+		{
+			"name": "update picture",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"nicolas@gmail.com\",\r\n    \"password\": \"1234567\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "GET PICTURE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/user/nicolas@gmail.com-WhatsApp Image 2024-09-30 at 7.35.42 PM.jpeg"
+			},
+			"response": []
+		},
+		{
+			"name": "GET USERS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/user"
+			},
+			"response": []
+		}
+	]
+}
